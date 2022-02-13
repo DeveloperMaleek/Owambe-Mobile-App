@@ -13,7 +13,12 @@ class _GetStartedPageState extends State<GetStartedPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(),
+      body: Center(
+        child: Text(
+          "data",
+          style: TextStyle(fontSize: 34),
+        ),
+      ),
       // This trailing comma makes auto-formatting nicer for build methods.
     );
   }

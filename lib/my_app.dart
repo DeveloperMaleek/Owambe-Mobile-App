@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:owambe_app/get_started_page.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
+        textTheme: GoogleFonts.nunitoTextTheme(Theme.of(context).textTheme),
         primarySwatch: Colors.blue,
       ),
       home: GetStartedPage(title: 'Flutter Demo Home Page'),
