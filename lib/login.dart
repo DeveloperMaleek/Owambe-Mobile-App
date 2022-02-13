@@ -33,9 +33,10 @@ class _LoginPageState extends State<LoginPage> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                const input.TextInput(
+                input.TextInput(
                   labelText: "Email address",
                   placeholder: "johndoe@example.com",
+                  labelTextColor: color.AppColor.blackText,
                 ),
                 const SizedBox(
                   height: 20,
@@ -44,9 +45,11 @@ class _LoginPageState extends State<LoginPage> {
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     input.PasswordInput(
+                      iconColor: color.AppColor.grayBlackColor,
                       labelText: "Password",
                       placeholder: "Click on the eye icon to see me",
                       validator: () {},
+                      labelTextColor: color.AppColor.blackText,
                     ),
                     const SizedBox(height: 8),
                     Text(

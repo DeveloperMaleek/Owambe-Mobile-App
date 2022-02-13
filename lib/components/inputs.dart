@@ -7,10 +7,12 @@ class TextInput extends StatelessWidget {
     Key? key,
     required this.labelText,
     required this.placeholder,
+    required this.labelTextColor,
   }) : super(key: key);
 
   final String labelText;
   final String placeholder;
+  final Color labelTextColor;
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class TextInput extends StatelessWidget {
                   BorderSide(color: color.AppColor.primaryColor, width: 2)),
           labelText: labelText,
           labelStyle: TextStyle(
-              color: color.AppColor.blackText,
+              color: labelTextColor,
               fontSize: MediaQuery.of(context).size.width * 0.04,
               fontWeight: FontWeight.w600),
           hintText: placeholder,
@@ -50,11 +52,15 @@ class PasswordInput extends StatelessWidget {
     required this.labelText,
     required this.placeholder,
     required this.validator,
+    required this.labelTextColor,
+    required this.iconColor,
   }) : super(key: key);
 
   final String labelText;
   final String placeholder;
   final Function() validator;
+  final Color labelTextColor;
+  final Color iconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -63,7 +69,11 @@ class PasswordInput extends StatelessWidget {
       child: TextFormField(
         obscureText: true,
         decoration: InputDecoration(
-          suffixIcon: Icon(Icons.remove_red_eye),
+          suffixIcon: Icon(
+            Icons.remove_red_eye,
+            color: iconColor,
+            size: MediaQuery.of(context).size.width * 0.04,
+          ),
           contentPadding: const EdgeInsets.fromLTRB(16, 12, 16, 12),
           focusedBorder: OutlineInputBorder(
               borderRadius: BorderRadius.circular(8.0),
@@ -75,7 +85,7 @@ class PasswordInput extends StatelessWidget {
                   BorderSide(color: color.AppColor.primaryColor, width: 2)),
           labelText: labelText,
           labelStyle: TextStyle(
-              color: color.AppColor.blackText,
+              color: labelTextColor,
               fontSize: MediaQuery.of(context).size.width * 0.04,
               fontWeight: FontWeight.w600),
           hintText: placeholder,

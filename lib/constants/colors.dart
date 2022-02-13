@@ -8,4 +8,6 @@ class AppColor {
   static Color accent = const Color(0xFFECF1F4);
   static Color blackText = const Color(0xFF101010);
   static Color iconBg = const Color(0xFFCDE7F2);
+  static Color grayBlackColor = const Color(0xFF4F4F4F);
+  static Color grayWhiteColor = const Color(0xFFE0E0E0);
 }
