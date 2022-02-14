@@ -38,9 +38,6 @@ class _LoginPageState extends State<LoginPage> {
                   placeholder: "johndoe@example.com",
                   labelTextColor: color.AppColor.blackText,
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [

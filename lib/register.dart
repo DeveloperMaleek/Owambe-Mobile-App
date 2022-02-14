@@ -39,18 +39,12 @@ class _RegisterPageState extends State<RegisterPage> {
                   placeholder: "johndoe@example.com",
                   labelTextColor: color.AppColor.accent,
                 ),
-                const SizedBox(
-                  height: 20,
-                ),
                 input.PasswordInput(
                   iconColor: color.AppColor.grayWhiteColor,
                   labelText: "Password",
                   placeholder: "Click on the eye icon to see me",
                   validator: () {},
                   labelTextColor: color.AppColor.accent,
-                ),
-                const SizedBox(
-                  height: 24,
                 ),
                 input.PasswordInput(
                   iconColor: color.AppColor.grayWhiteColor,
@@ -60,13 +54,15 @@ class _RegisterPageState extends State<RegisterPage> {
                   labelTextColor: color.AppColor.accent,
                 ),
                 const SizedBox(
-                  height: 24,
+                  height: 10,
                 ),
                 Column(
                   children: [
                     button.PrimaryButton(
                       buttonText: "CREATE AN ACCOUNT",
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushNamed(context, "/setup account");
+                      },
                     ),
                     const SizedBox(height: 8),
                     RichText(
@@ -81,8 +77,7 @@ class _RegisterPageState extends State<RegisterPage> {
                             TextSpan(
                                 recognizer: TapGestureRecognizer()
                                   ..onTap = () {
-                                    Navigator.of(context)
-                                        .pushNamed("/register");
+                                    Navigator.of(context).pushNamed("/login");
                                   },
                                 text: "Sign In",
                                 style: TextStyle(
