@@ -97,3 +97,42 @@ class _BottomNavigationState extends State<BottomNavigation> {
     );
   }
 }
+
+//Component for the Icon and Text Wrapped in a border
+class IconTextNavigation extends StatelessWidget {
+  const IconTextNavigation(
+      {Key? key, required this.textLabel, required this.icon})
+      : super(key: key);
+  final String textLabel;
+  final IconData icon;
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.all(8),
+      decoration: BoxDecoration(
+          border: Border.all(color: color.AppColor.primaryColor, width: 2),
+          borderRadius: BorderRadius.circular(20)),
+      child: Row(children: [
+        Container(
+          margin: EdgeInsets.fromLTRB(0, 0, 8, 0),
+          padding: EdgeInsets.all(6),
+          decoration: BoxDecoration(
+              color: color.AppColor.iconBg,
+              borderRadius: BorderRadius.circular(8)),
+          child: Icon(
+            icon,
+            size: 18,
+            color: color.AppColor.primaryTextColor,
+          ),
+        ),
+        Text(
+          textLabel,
+          style: TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 14,
+              color: color.AppColor.primaryTextColor),
+        )
+      ]),
+    );
+  }
+}
