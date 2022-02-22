@@ -58,11 +58,27 @@ class ContentSubtitles extends StatelessWidget {
         fontSize: 14,
         fontWeight: FontWeight.w400,
         color: color.AppColor.primaryTextColor);
-    return Container(
-      child: Text(
-        subtitle,
-        style: smallBodyText,
-      ),
+    return Text(
+      subtitle,
+      style: smallBodyText,
+    );
+  }
+}
+
+class MeterText extends StatelessWidget {
+  const MeterText({Key? key, required this.subtitle}) : super(key: key);
+
+  final String subtitle;
+  @override
+  Widget build(BuildContext context) {
+    //used for the subtitles in pages
+    TextStyle meterText = TextStyle(
+        fontSize: 12,
+        fontWeight: FontWeight.bold,
+        color: color.AppColor.primaryTextColor);
+    return Text(
+      subtitle,
+      style: meterText,
     );
   }
 }

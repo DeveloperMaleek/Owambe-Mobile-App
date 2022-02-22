@@ -129,7 +129,7 @@ class IconTextNavigation extends StatelessWidget {
           textLabel,
           style: TextStyle(
               fontWeight: FontWeight.bold,
-              fontSize: 14,
+              fontSize: MediaQuery.of(context).size.width * 0.035,
               color: color.AppColor.primaryTextColor),
         )
       ]),

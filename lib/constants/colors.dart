@@ -10,4 +10,9 @@ class AppColor {
   static Color iconBg = const Color(0xFFCDE7F2);
   static Color grayBlackColor = const Color(0xFF4F4F4F);
   static Color grayWhiteColor = const Color(0xFFE0E0E0);
+  static Color meterRedColor = const Color(0xFFEB5757);
+  static Color meterDefaultColor = const Color(0xFFBDBDBD);
+  static Color meterOrangeColor = const Color(0xFFF2994A);
+  static Color meterYellowColor = const Color(0xFFF2C94C);
+  static Color meterGreenColor = const Color(0xFF27AE60);
 }

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:owambe_app/constants/colors.dart' as color;
 import 'components/navigation.dart' as menu_bar;
 import 'constants/titles.dart' as text_content;
+import 'components/meters.dart' as meter;
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -20,12 +21,32 @@ class _DashboardPageState extends State<DashboardPage> {
     return Scaffold(
       backgroundColor: color.AppColor.accent,
       body: ListView(
-        children: [
-          _sectionOne(),
-          _sectionTwo(),
-        ],
+        children: [_sectionOne(), _sectionTwo(), _sectionThree()],
       ),
       // bottomNavigationBar: const menu_bar.BottomNavigation(),
+    );
+  }
+
+  Widget _sectionThree() {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Container(
+        decoration: BoxDecoration(
+            color: color.AppColor.lightBackgroundColor,
+            borderRadius: BorderRadius.circular(30)),
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const text_content.ContentTitles(title: "Owambe Meter"),
+            Container(
+                width: MediaQuery.of(context).size.width,
+                height: 100,
+                margin: EdgeInsets.fromLTRB(0, 24, 0, 0),
+                child: meter.OwambeMeter())
+          ],
+        ),
+      ),
     );
   }
 
@@ -36,7 +57,7 @@ class _DashboardPageState extends State<DashboardPage> {
         decoration: BoxDecoration(
             color: color.AppColor.lightBackgroundColor,
             borderRadius: BorderRadius.circular(30)),
-        padding: const EdgeInsets.all(16),
+        padding: const EdgeInsets.all(12),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
