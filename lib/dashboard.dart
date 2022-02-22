@@ -29,7 +29,39 @@ class _DashboardPageState extends State<DashboardPage> {
     );
   }
 
-  
+  Widget _sectionTwo() {
+    return Padding(
+      padding: const EdgeInsets.all(16.0),
+      child: Container(
+        decoration: BoxDecoration(
+            color: color.AppColor.lightBackgroundColor,
+            borderRadius: BorderRadius.circular(30)),
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const text_content.ContentTitles(title: "Your Next Owambe"),
+            Container(
+              margin: EdgeInsets.fromLTRB(0, 24, 0, 0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: const [
+                  menu_bar.IconTextNavigation(
+                    icon: Icons.date_range,
+                    textLabel: "THURSDAY, 24/02/2022",
+                  ),
+                  menu_bar.IconTextNavigation(
+                    icon: Icons.access_time,
+                    textLabel: "12:00 PM",
+                  )
+                ],
+              ),
+            )
+          ],
+        ),
+      ),
+    );
+  }
 
   Widget _sectionOne() {
     return Padding(
