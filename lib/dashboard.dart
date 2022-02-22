@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:owambe_app/constants/colors.dart' as color;
 import 'components/navigation.dart' as menu_bar;
 import 'constants/titles.dart' as text_content;
-import 'components/meters.dart' as meter;
+import '../components/meters.dart' as meter;
+import '../components/owambe_snippet.dart' as owambe_snippet;
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -21,15 +22,37 @@ class _DashboardPageState extends State<DashboardPage> {
     return Scaffold(
       backgroundColor: color.AppColor.accent,
       body: ListView(
-        children: [_sectionOne(), _sectionTwo(), _sectionThree()],
+        children: [
+          _sectionOne(),
+          _sectionTwo(),
+          _sectionThree(),
+          _sectionFour()
+        ],
       ),
-      // bottomNavigationBar: const menu_bar.BottomNavigation(),
+      bottomNavigationBar: const menu_bar.BottomNavigation(),
+    );
+  }
+
+  Widget _sectionFour() {
+    return Container(
+      padding: EdgeInsets.all(16),
+      decoration: BoxDecoration(
+          color: color.AppColor.lightBackgroundColor,
+          borderRadius: BorderRadius.circular(30)),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const text_content.ContentTitles(
+              title: "Owambe Your Friends Are Attending"),
+          owambe_snippet.OwambeSnippet(),
+        ],
+      ),
     );
   }
 
   Widget _sectionThree() {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.fromLTRB(16.0, 8, 16.0, 16),
       child: Container(
         decoration: BoxDecoration(
             color: color.AppColor.lightBackgroundColor,
@@ -52,7 +75,7 @@ class _DashboardPageState extends State<DashboardPage> {
 
   Widget _sectionTwo() {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.fromLTRB(16.0, 8, 16.0, 8),
       child: Container(
         decoration: BoxDecoration(
             color: color.AppColor.lightBackgroundColor,
@@ -86,7 +109,7 @@ class _DashboardPageState extends State<DashboardPage> {
 
   Widget _sectionOne() {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.fromLTRB(16.0, 8, 16.0, 8),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
