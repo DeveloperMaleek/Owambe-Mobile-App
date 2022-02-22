@@ -19,80 +19,80 @@ class _SetupAccountPageState extends State<SetupAccountPage> {
 
   @override
   Widget build(BuildContext context) {
+    List<String> values = ['male', 'female', 'homo'];
+
     return Scaffold(
       backgroundColor: color.AppColor.accent,
-      body: ListView(
+      body: SingleChildScrollView(
         padding: const EdgeInsets.fromLTRB(16, 40, 16, 16),
-        children: [
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Text(
-                "Setup your account",
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              "Setup your account",
+              style: TextStyle(
+                  color: color.AppColor.blackText,
+                  fontSize: MediaQuery.of(context).size.width * 0.07,
+                  fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(
+              height: 2,
+            ),
+            Text("Let us setup your account for you quickly",
                 style: TextStyle(
                     color: color.AppColor.blackText,
-                    fontSize: MediaQuery.of(context).size.width * 0.07,
-                    fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(
-                height: 2,
-              ),
-              Text("Let us setup your account for you quickly",
-                  style: TextStyle(
-                      color: color.AppColor.blackText,
-                      fontSize: MediaQuery.of(context).size.width * 0.04,
-                      fontWeight: FontWeight.normal)),
-              const SizedBox(
-                height: 20,
-              ),
-              input.TextInput(
-                labelText: "Fullname",
-                placeholder: "Enter your fullname here",
-                labelTextColor: color.AppColor.blackText,
-              ),
-              input.TextInput(
-                labelText: "Owambe Handle",
-                placeholder: "@ groover",
-                labelTextColor: color.AppColor.blackText,
-              ),
-              input.TextInput(
-                labelText: "Phone number",
-                placeholder: "09059784163",
-                labelTextColor: color.AppColor.blackText,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  input.DateInput(
-                    width: MediaQuery.of(context).size.width * 0.45,
-                    iconValue: Icons.calendar_today,
-                    labelText: "D.0.B",
+                    fontSize: MediaQuery.of(context).size.width * 0.04,
+                    fontWeight: FontWeight.normal)),
+            const SizedBox(
+              height: 20,
+            ),
+            input.TextInput(
+              labelText: "Fullname",
+              placeholder: "Enter your fullname here",
+              labelTextColor: color.AppColor.blackText,
+            ),
+            input.TextInput(
+              labelText: "Owambe Handle",
+              placeholder: "@ groover",
+              labelTextColor: color.AppColor.blackText,
+            ),
+            input.TextInput(
+              labelText: "Phone number",
+              placeholder: "09059784163",
+              labelTextColor: color.AppColor.blackText,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                input.DateInput(
+                  width: MediaQuery.of(context).size.width * 0.45,
+                  iconValue: Icons.calendar_today,
+                  labelText: "D.0.B",
+                  labelTextColor: color.AppColor.blackText,
+                  iconColor: color.AppColor.primaryColor,
+                  placeholder: "DD/MM/YYYY",
+                ),
+                input.DropDown(
+                    iconValue: Icons.arrow_drop_down_outlined,
+                    labelText: "Gender",
                     labelTextColor: color.AppColor.blackText,
-                    iconColor: color.AppColor.primaryColor,
-                    placeholder: "DD/MM/YYYY",
-                  ),
-                  input.DateInput(
                     width: MediaQuery.of(context).size.width * 0.45,
-                    iconValue: Icons.calendar_today,
-                    labelText: "D.0.B",
-                    labelTextColor: color.AppColor.blackText,
-                    iconColor: color.AppColor.primaryColor,
-                    placeholder: "DD/MM/YYYY",
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 24,
-              ),
-              button.PrimaryButton(
-                buttonText: "COMPLETE SETUP",
-                onPressed: () {
-                  Navigator.pushNamed(context, "/dashboard");
-                },
-              )
-            ],
-          )
-        ],
+                    placeholder: "Select a gender",
+                    values: values),
+              ],
+            ),
+            const SizedBox(
+              height: 24,
+            ),
+            // Expanded(child: Container()),
+            button.PrimaryButton(
+              buttonText: "COMPLETE SETUP",
+              onPressed: () {
+                Navigator.pushNamed(context, "/dashboard");
+              },
+            )
+          ],
+        ),
       ),
     );
     // This trailing comma makes auto-formatting nicer for build methods.

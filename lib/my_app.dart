@@ -20,8 +20,7 @@ class MyApp extends StatelessWidget {
         // "/": (context) => const GetStartedPage(title: "Get Started Page"),
         "/login": (context) => const LoginPage(title: "Login Page"),
         "/register": (context) => const RegisterPage(title: "Register Page"),
-        "/setup account": (context) =>
-            const SetupAccountPage(title: "Setup Account Page"),
+        "/setup account": (context) => const SetupAccountPage(title: "Account Setup",),
         "/dashboard": (context) => const DashboardPage(),
       },
       theme: ThemeData(
