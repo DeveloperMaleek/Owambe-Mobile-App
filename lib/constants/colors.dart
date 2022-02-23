@@ -15,4 +15,5 @@ class AppColor {
   static Color meterOrangeColor = const Color(0xFFF2994A);
   static Color meterYellowColor = const Color(0xFFF2C94C);
   static Color meterGreenColor = const Color(0xFF27AE60);
+  static Color grayFive = const Color(0xFFE0E0E0);
 }

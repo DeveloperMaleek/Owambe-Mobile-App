@@ -38,7 +38,8 @@ class _DashboardPageState extends State<DashboardPage> {
       padding: EdgeInsets.all(16),
       decoration: BoxDecoration(
           color: color.AppColor.lightBackgroundColor,
-          borderRadius: BorderRadius.circular(30)),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(30), topRight: Radius.circular(30))),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
