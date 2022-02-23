@@ -82,3 +82,22 @@ class MeterText extends StatelessWidget {
     );
   }
 }
+
+class EventTextTitle extends StatelessWidget {
+  const EventTextTitle({Key? key, required this.eventTextTitle})
+      : super(key: key);
+
+  final String eventTextTitle;
+  @override
+  Widget build(BuildContext context) {
+    //used for the Event titles in pages
+    TextStyle meterText = TextStyle(
+        fontSize: 16,
+        fontWeight: FontWeight.normal,
+        color: color.AppColor.blackText);
+    return Text(
+      eventTextTitle,
+      style: meterText,
+    );
+  }
+}

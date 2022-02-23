@@ -88,7 +88,7 @@ class _SetupAccountPageState extends State<SetupAccountPage> {
             button.PrimaryButton(
               buttonText: "COMPLETE SETUP",
               onPressed: () {
-                Navigator.pushNamed(context, "/dashboard");
+                Navigator.pushNamed(context, "/navigation");
               },
             )
           ],

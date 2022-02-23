@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:owambe_app/components/navigation.dart';
 import 'package:owambe_app/dashboard.dart';
 import 'package:owambe_app/get_started_page.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,17 +18,20 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       initialRoute: "/",
       routes: {
-        // "/": (context) => const GetStartedPage(title: "Get Started Page"),
+        "/": (context) => const GetStartedPage(title: "Get Started Page"),
         "/login": (context) => const LoginPage(title: "Login Page"),
         "/register": (context) => const RegisterPage(title: "Register Page"),
-        "/setup account": (context) => const SetupAccountPage(title: "Account Setup",),
-        "/dashboard": (context) => const DashboardPage(),
+        "/setup account": (context) => const SetupAccountPage(
+              title: "Account Setup",
+            ),
+        "/navigation": (context) => const BottomNavigation(),
+        // "/dashboard": (context) => const DashboardPage(),
       },
       theme: ThemeData(
         textTheme: GoogleFonts.nunitoTextTheme(Theme.of(context).textTheme),
         primarySwatch: Colors.blue,
       ),
-      home: const GetStartedPage(title: 'Flutter Demo Home Page'),
+      // home: const GetStartedPage(title: 'Flutter Demo Home Page'),
     );
   }
 }

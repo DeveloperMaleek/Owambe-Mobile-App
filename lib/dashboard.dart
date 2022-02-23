@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:owambe_app/components/buttons.dart' as menu_bar;
 import 'package:owambe_app/constants/colors.dart' as color;
-import 'components/navigation.dart' as menu_bar;
 import 'constants/titles.dart' as text_content;
 import '../components/meters.dart' as meter;
 import '../components/owambe_snippet.dart' as owambe_snippet;
@@ -29,20 +29,20 @@ class _DashboardPageState extends State<DashboardPage> {
           _sectionFour()
         ],
       ),
-      bottomNavigationBar: const menu_bar.BottomNavigation(),
     );
   }
 
   Widget _sectionFour() {
     return Container(
-      padding: EdgeInsets.all(16),
+      padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
           color: color.AppColor.lightBackgroundColor,
-          borderRadius: BorderRadius.circular(30)),
+          borderRadius: const BorderRadius.only(
+              topLeft: Radius.circular(30), topRight: Radius.circular(30))),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          const text_content.ContentTitles(
+        children: const [
+          text_content.ContentTitles(
               title: "Owambe Your Friends Are Attending"),
           owambe_snippet.OwambeSnippet(),
         ],
@@ -65,8 +65,8 @@ class _DashboardPageState extends State<DashboardPage> {
             Container(
                 width: MediaQuery.of(context).size.width,
                 height: 100,
-                margin: EdgeInsets.fromLTRB(0, 24, 0, 0),
-                child: meter.OwambeMeter())
+                margin: const EdgeInsets.fromLTRB(0, 24, 0, 0),
+                child: const meter.OwambeMeter())
           ],
         ),
       ),
@@ -86,7 +86,7 @@ class _DashboardPageState extends State<DashboardPage> {
           children: [
             const text_content.ContentTitles(title: "Your Next Owambe"),
             Container(
-              margin: EdgeInsets.fromLTRB(0, 24, 0, 0),
+              margin: const EdgeInsets.fromLTRB(0, 24, 0, 0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
