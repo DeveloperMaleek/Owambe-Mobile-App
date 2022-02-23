@@ -41,8 +41,8 @@ class _DashboardPageState extends State<DashboardPage> {
               topLeft: Radius.circular(30), topRight: Radius.circular(30))),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children: const [
-          text_content.ContentTitles(
+        children: [
+          const text_content.ContentTitles(
               title: "Owambe Your Friends Are Attending"),
           owambe_snippet.OwambeSnippet(),
         ],
