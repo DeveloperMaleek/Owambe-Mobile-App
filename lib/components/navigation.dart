@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:owambe_app/constants/colors.dart' as color;
-import 'package:owambe_app/owambe_page.dart';
-import 'package:owambe_app/dashboard.dart';
+import 'package:owambe_app/pages/memories.dart';
+import 'package:owambe_app/pages/owambe_page.dart';
+import 'package:owambe_app/pages/dashboard.dart';
+import 'package:owambe_app/pages/profile.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation({Key? key}) : super(key: key);
@@ -16,6 +18,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
   static const List<Widget> _widgetOptions = <Widget>[
     DashboardPage(),
     OwambePage(),
+    MemoriesPage(),
+    ProfilePage(),
   ];
   @override
   Widget build(BuildContext context) {

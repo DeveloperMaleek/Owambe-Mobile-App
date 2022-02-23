@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:owambe_app/components/navigation.dart';
-import 'package:owambe_app/dashboard.dart';
+import 'package:owambe_app/pages/dashboard.dart';
 import 'package:owambe_app/get_started_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:owambe_app/login.dart';

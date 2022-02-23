@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:owambe_app/components/buttons.dart' as menu_bar;
 import 'package:owambe_app/constants/colors.dart' as color;
-import 'constants/titles.dart' as text_content;
-import '../components/meters.dart' as meter;
-import '../components/owambe_snippet.dart' as owambe_snippet;
+import '../constants/titles.dart' as text_content;
+import '../../components/meters.dart' as meter;
+import '../../components/owambe_snippet.dart' as owambe_snippet;
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({Key? key}) : super(key: key);
@@ -37,11 +37,7 @@ class _DashboardPageState extends State<DashboardPage> {
       padding: const EdgeInsets.all(16),
       decoration: BoxDecoration(
           color: color.AppColor.lightBackgroundColor,
-<<<<<<< HEAD
           borderRadius: const BorderRadius.only(
-=======
-          borderRadius: BorderRadius.only(
->>>>>>> 7f42f8fe09c4fb46375d7d46799ff5d276c0fed7
               topLeft: Radius.circular(30), topRight: Radius.circular(30))),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

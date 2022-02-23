@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:owambe_app/constants/colors.dart' as color;
-import 'components/navigation.dart' as menu_bar;
-import 'constants/titles.dart' as text_content;
+import '../components/navigation.dart' as menu_bar;
+import '../constants/titles.dart' as text_content;
+
 
 class OwambePage extends StatefulWidget {
   const OwambePage({Key? key}) : super(key: key);
