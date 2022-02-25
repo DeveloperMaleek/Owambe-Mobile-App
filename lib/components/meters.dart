@@ -110,7 +110,7 @@ class OwambeMeter extends StatelessWidget {
   Widget _singleMeterBottom(
       String monthName, int owambeNumber, Color meterColor) {
     return Container(
-      margin: EdgeInsets.fromLTRB(0, 36, 0, 0),
+      margin: EdgeInsets.fromLTRB(0, 40, 0, 0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
